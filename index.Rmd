@@ -1,0 +1,26 @@
+---
+title: "hr2569 Personal Website"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+# Welcome to my personal website
+
+A warm welcome with Winston and Symmetra from Overwatch!
+
+<img src="images/welcome-to-overwatchfire.png" style="width:75%">
+
+This is a simple website introducing myself to you. You can browse my resume in [about](about-me.html) page. 
+Hope you enjoy it! 
+
+# Flexdashboard
+
+I created a felxdashboard using three plotly with instacart dataset.
+Here's the [link](data_flexdashboard.html)
+
+# Link to other sites
+
+* Mailman School of Public health [website](https://www.publichealth.columbia.edu/)
+* P8105 course [website](https://p8105.com/)

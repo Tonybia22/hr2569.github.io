@@ -1,0 +1,31 @@
+---
+title: "About me"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+## Academic experience
+
+#### *Fudan University* | Shanghai,China | 2018~2023
+Bachelor in Statistics, School of Management
+
+#### *Columbia University* | New York,United States | 2023~2025 
+Master in Biostatistics, Mailman School of Public Health
+
+## Internship
+
+#### *Sanofi Genzyme* | Shanghai,China | 2023
+Intern, New Product Planning Team
+
+* Concluded clinical trials outcomes of certain drugs, tracked domestic competitor intelligence of drugs indicated for rare diseases ranging from hemophilia, ITP, AGR1 deficiency, etc.
+* Searched and interpreted relevant information of rare diseases including incidence, symptoms, treatment, etc. Provided the team with preliminary background knowledge for targeted disease.
+* Assisted in the analysis of the domestic market growth of the drugs indicated for ITP, supported in making market strategies, undertook the preparation for the medical insurance catalogue negotiation with the government.
+
+#### *Frost&Sullivian* | Shanghai,China | 2022
+Intern, Medical Consulting Group
+
+*	Performed the Transcatheter aortic valve replacement (TAVR) market research to analyze strategies for clients. 
+*	Assisted in the research of domestic commercial medical insurance industry and the cell therapy industry chain
+*	Collected and sorted out the industry data and information, including policy interpretation, research literature, current development procedure, etc. to assist the project analysis.

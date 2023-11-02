@@ -1,0 +1,70 @@
+---
+title: "instacart flexdashboard"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(tidyverse)
+library(p8105.datasets)
+library(plotly)
+```
+
+```{r data_clean_tidy, include=FALSE}
+data("instacart")
+```
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Boxplot of Ordered Number Among Different Departments of 100 Users
+
+```{r department, echo=FALSE}
+instacart |>
+  filter(
+    user_id %in% sample(unique(user_id),100)
+  ) |> 
+  mutate(department = fct_reorder(department, order_number)) |> 
+  plot_ly(y = ~order_number, color = ~department, type = "box", colors = "viridis")
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Total Orders of Alcohol Throughout Hours of Day
+
+```{r alcohol, echo=FALSE}
+
+instacart_alcohol <- instacart |> 
+  filter(
+    department == "alcohol"
+  ) |> 
+  ggplot(aes(x =  order_hour_of_day))+
+  geom_bar()
+
+ggplotly(instacart_alcohol)
+```
+
+### The Difference of Alcohol Order Number Trend Between Reordered Group Along Days Since Prior Order
+
+```{r alcohol_trend,echo=FALSE}
+
+instacart_alcohol_trend <- instacart |> 
+  filter(
+    department == "alcohol"
+  ) |> 
+  mutate(
+    reordered = recode(reordered,"0" = "initial","1" = "reordered")
+  ) |> 
+  ggplot(aes(y =  order_number, x = days_since_prior_order))+
+  geom_point()+
+  geom_smooth(se=FALSE)+
+  facet_grid(.~reordered)
+
+ggplotly(instacart_alcohol_trend)
+
+```
+
